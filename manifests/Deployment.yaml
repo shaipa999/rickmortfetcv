@@ -15,7 +15,7 @@ spec:
         app: rickmorthumali1
     spec:
       containers:
-      - image: mortkurtv2d.azurecr.io/k8sdemo:5d361e0caae4f4c37b1f5c6a3644a87ad36c724e
+      - image: mortkurtv2d.azurecr.io/k8sdemo:latest
         imagePullPolicy: IfNotPresent
         name: rickmorthumali1
         ports:
