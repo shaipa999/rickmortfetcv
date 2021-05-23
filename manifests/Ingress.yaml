@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rickmorthumali1-ingress
+spec:
+  rules:
+  - host: rickmorthumali1-ingress.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: rickmorthumali1-internal-service
+            port:
+              number: 8080

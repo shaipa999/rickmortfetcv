@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rickmorthumali1
+  labels:
+    app: rickmorthumali1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rickmorthumali1
+  template:
+    metadata:
+      labels:
+        app: rickmorthumali1
+    spec:
+      containers:
+      - image: rickmorthumali1:latest
+        imagePullPolicy: IfNotPresent
+        name: rickmorthumali1
+        ports:
+        - containerPort: 8080
+          protocol: TCP
