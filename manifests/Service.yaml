@@ -7,6 +7,6 @@ spec:
   selector:
     app: rickmorthumali1
   ports:
-    - nodePort: 8085
+    - nodePort: 31611
       port: 8080
       targetPort: 8080
