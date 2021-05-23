@@ -53,7 +53,7 @@ The workflow:
 http://20.81.102.53:8080/fetch
 http://20.81.102.53:8080/healthcheck
 
-3. Performs tests.
+FIN.
 
 ```
 
