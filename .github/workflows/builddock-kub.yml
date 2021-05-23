@@ -44,6 +44,7 @@ jobs:
       uses: actions/setup-node@v1
     - name: npm test
       run: |
+        npm install
         npm test
       env:
         CI: true
