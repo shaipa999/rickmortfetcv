@@ -39,11 +39,6 @@ jobs:
           mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
         imagepullsecrets: |
           demo-k8s-secret
-          
-  test:
-   runs-on: ubuntu-latest
-
-   steps:
     - uses: actions/checkout@v2
     - name: do tests
       uses: actions/setup-node@v1
@@ -52,3 +47,5 @@ jobs:
         npm test
       env:
         CI: true
+
+    
