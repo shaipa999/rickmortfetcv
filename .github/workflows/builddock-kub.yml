@@ -39,12 +39,16 @@ jobs:
           mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
         imagepullsecrets: |
           demo-k8s-secret
+    
+    
     - uses: actions/checkout@v2
-    - name: do tests
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
-    - name: npm test
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install and test
       run: |
-        npm install
+        npm ci
         npm test
       env:
         CI: true
