@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: rickmorthumali1-internal-service
 spec:
-  type: NodePort 
+  type: LoadBalancer 
   selector:
     app: rickmorthumali1
   ports:
-    - nodePort: 31611
       port: 8080
       targetPort: 8080
