@@ -8,13 +8,13 @@ jobs:
     
     - uses: Azure/docker-login@v1
       with:
-        login-server: contoso.azurecr.io
+        login-server: mortkurtv2d.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     
     - run: |
-        docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
-        docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+        docker build . -t mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
+        docker push mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
       
     # Set the target AKS cluster.
     - uses: Azure/aks-set-context@v1
@@ -36,6 +36,6 @@ jobs:
           manifests/deployment.yml
           manifests/service.yml
         images: |
-          demo.azurecr.io/k8sdemo:${{ github.sha }}
+          mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
         imagepullsecrets: |
           demo-k8s-secret
