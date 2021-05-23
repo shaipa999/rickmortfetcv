@@ -37,6 +37,24 @@ docker build -t rickmorthumali1:latest .
 Fetch through:
 
 ```
+* You will need to add the IP to the hosts file.
+
  http://rickmorthumali1-ingress.com/fetch
  http://rickmorthumali1-ingress.com/healthcheck
  ```
+ 
+ 
+ WorkFlow:
+ 
+```
+The workflow:
+1. Builds the app through docker.
+2. Publishes it on Azure kubernetes http://20.81.102.53:8080
+http://20.81.102.53:8080/fetch
+http://20.81.102.53:8080/healthcheck
+
+3. Performs tests.
+
+```
+
+ 
