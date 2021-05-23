@@ -13,7 +13,7 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     
     - run: |
-        docker build . -t mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
+        docker build ./deploy/. -t mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
         docker push mortkurtv2d.azurecr.io/k8sdemo:${{ github.sha }}
       
     # Set the target AKS cluster.
