@@ -1,13 +1,14 @@
 {
   "name": "projver",
   "version": "1.0.0",
+  "main": "index.js",
   "description": "",
   "scripts": {
     "test": "mocha ./test/* --exit"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/shaipa999/projVer#readme",
+  
   "dependencies": {
     "express": "^4.17.1"
   },
