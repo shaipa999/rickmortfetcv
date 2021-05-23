@@ -1,5 +1,6 @@
 const request = require("supertest");
-const app = require("../index");
+const express = require("express");
+const app = express();
 
 describe("GET http://20.81.102.53:8080/healthcheck", () => {
   it("respond with ok", (done) => {
